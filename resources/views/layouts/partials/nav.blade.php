@@ -26,6 +26,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
                 <?php $mark = (preg_match('/\?/', url()->current())) ? '&' : '?'; ?>
+                <li><a href="{{ url(url()->current() . $mark . 'lang=zh') }}">zh</a></li>
                 <li><a href="{{ url(url()->current() . $mark . 'lang=en') }}">en</a></li>
                 <li><a href="{{ url(url()->current() . $mark . 'lang=id') }}">id</a></li>
                 @if (Auth::guest())

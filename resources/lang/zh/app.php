@@ -1,0 +1,42 @@
+<?php
+
+return [
+    // Labels
+    'my_profile'        => '个人信息',
+    'search'            => '搜索',
+    'unknown'           => 'Unknown',
+    'male'              => '男',
+    'female'            => '女',
+    'male_code'         => 'M',
+    'female_code'       => 'F',
+    'family_chart'      => 'Family Chart',
+    'family_tree'       => 'Family Tree',
+    'child_count'       => 'Child Count',
+    'grand_child_count' => 'Grand Child Count',
+    'user_found'        => '<strong>:total</strong> found with keyword : <strong>:keyword</strong>',
+    'search_your_family' => 'Find Your Family',
+    'search_your_family_placeholder' => 'Enter name/nickname... click Search',
+    'example'           => 'Eg.',
+    'address'           => 'Address',
+    'contact'           => 'Contact',
+    'city'              => 'City',
+    'phone'             => 'Phone',
+    'login_account'     => 'Login Account',
+    'childs_were_not_recorded' => 'Childs were not recorded.',
+
+    // Actions
+    'edit'              => 'Edit',
+    'update'            => 'Update',
+    'show_profile'      => '个人信息',
+    'show_family_chart' => '家庭图',
+    'show_family_tree'  => '家庭树',
+    'show_marriages'    => '婚姻',
+    'enter_new_name'    => 'Enter new Name...',
+    'select_from_existing_males'   => 'Select from Existing Males',
+    'select_from_existing_females' => 'Select from Existing Females',
+    'select_from_existing_couples' => 'Select from Existing Couples',
+    'restore'           => 'Restore',
+    'download'          => '下载',
+    'delete'            => 'Delete',
+    'cancel'            => 'Cancel',
+];
