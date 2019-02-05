@@ -26,7 +26,7 @@ return [
     'change_password'           => 'Change Password',
     'forgot_password'           => '忘记密码?',
     'reset_password'            => 'Reset Password',
-    'password_confirmation'     => 'Repeat Password',
+    'password_confirmation'     => '再输入一次密码',
     'old_password'              => 'Old Password',
     'new_password'              => 'New Password',
     'new_password_confirmation' => 'Repeat New Password',

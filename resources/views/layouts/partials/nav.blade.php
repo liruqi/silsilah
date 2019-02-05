@@ -26,8 +26,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
                 <?php $mark = (preg_match('/\?/', url()->current())) ? '&' : '?'; ?>
-                <li><a href="{{ url(url()->current() . $mark . 'lang=zh') }}">zh</a></li>
-                <li><a href="{{ url(url()->current() . $mark . 'lang=en') }}">en</a></li>
+                <li><a href="{{ url(url()->current() . $mark . 'lang=zh') }}">中文</a></li>
+                <li><a href="{{ url(url()->current() . $mark . 'lang=en') }}">English</a></li>
                 @if (Auth::guest())
                     <li><a href="{{ route('login') }}">Login</a></li>
                     <li><a href="{{ route('register') }}">Register</a></li>
@@ -38,7 +38,9 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
+                            @can ('admin', Auth::user())
                             <li><a href="{{ route('backups.index') }}">{{ trans('backup.list') }}</a></li>
+                            @endcan
                             <li><a href="{{ route('profile') }}">{{ trans('app.my_profile') }}</a></li>
                             <li><a href="{{ route('profile.change-password.form') }}">{{ trans('auth.change_password') }}</a></li>
                             <li>

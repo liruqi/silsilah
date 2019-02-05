@@ -37,7 +37,7 @@ class FamilyActionsController extends Controller
             $user->setFather($father);
         }
 
-        return back();
+        return redirect()->route('users.show', $user);
     }
 
     /**
@@ -68,7 +68,7 @@ class FamilyActionsController extends Controller
             $user->setMother($mother);
         }
 
-        return back();
+        return redirect()->route('users.show', $user);
     }
 
     /**
@@ -146,7 +146,7 @@ class FamilyActionsController extends Controller
 
         $user->addWife($wife, $request->get('marriage_date'));
 
-        return back();
+        return redirect()->route('users.show', $user);
     }
 
     /**
@@ -177,7 +177,7 @@ class FamilyActionsController extends Controller
 
         $user->addHusband($husband, $request->get('marriage_date'));
 
-        return back();
+        return redirect()->route('users.show', $user);
     }
 
     /**
