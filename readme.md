@@ -34,7 +34,7 @@ This application uses Bahasa Indonesia and English based on `config.locale`.
 1. Nickname
 2. Gender
 3. Fullname
-4. Date of birht
+4. Date of birth
 5. Date of death (or at least year of death)
 6. Address
 7. Phone Number

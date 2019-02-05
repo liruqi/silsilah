@@ -42,9 +42,9 @@ return [
     'yod'      => 'Year of Death',
     'email'    => 'Email',
     'password' => 'Password',
-    'address'  => 'Address',
+    'address'  => '简介',
     'city'     => 'City',
-    'phone'    => 'Phone',
+    'phone'    => '手机号',
     'manager'  => 'Manager',
 
     // Photo
