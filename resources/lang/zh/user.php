@@ -41,7 +41,6 @@ return [
     'dod'      => '殁于',
     'yod'      => 'Year of Death',
     'email'    => 'Email',
-    'password' => 'Password',
     'address'  => '简介',
     'city'     => 'City',
     'phone'    => '手机号',
