@@ -93,7 +93,11 @@ class UsersController extends Controller
      */
     public function tree(User $user)
     {
-        return view('users.tree', compact('user'));
+        if (\Auth::guest()) {
+            return view('users.tree', compact('user'));
+        }
+
+        return view('users.treeFullname', compact('user'));
     }
 
     /**

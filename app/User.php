@@ -91,6 +91,19 @@ class User extends Authenticatable
         return false;
     }
 
+    public function fullName()
+    {
+        if ($this->name === $this->nickname) {
+            if ($this->gender_id === 1) {
+                return $this->name;
+            }
+
+            return $this->name . "（女）";
+        }
+
+        return $this->name . trans('user.nickname') . $this->nickname; 
+    }
+
     public function father()
     {
         return $this->belongsTo(User::class);
