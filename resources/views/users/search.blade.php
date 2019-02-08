@@ -50,8 +50,9 @@
 {{ $users->appends(Request::except('page'))->render() }}
 @else
 <br/>
-<p>
-本站由李如琦维护。李氏宗亲可以自行录入，如果有其它问题或者建议，可以联系我本人。
+<div>
+<p>本站由<a href="/users/49b20e78-70eb-4761-93b5-1e2a008129e3">如琦</a>维护。</p>
+<p>李氏宗亲可以注册账号，自行录入。如果有其它问题或者建议，可以联系<a href="/users/49b20e78-70eb-4761-93b5-1e2a008129e3">如琦</a>本人。</a>
 </p>
 @endif
 @endsection
