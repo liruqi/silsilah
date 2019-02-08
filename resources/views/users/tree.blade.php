@@ -13,7 +13,7 @@ $ggccTotal = 0;
 ?>
 
 <div id="wrapper">
-    <span class="label">{{ link_to_route('users.tree', $user->name, [$user->id], ['title' => $user->name.' ('.$user->gender.')']) }}</span>
+    <span class="label">{{ link_to_route('users.show', $user->name, [$user->id], ['title' => $user->name.' ('.$user->gender.')']) }}</span>
         @if ($childsCount = $user->childs->count())
         <?php $childsTotal += $childsCount ?>
         <div class="branch lv1">
@@ -43,7 +43,7 @@ $ggccTotal = 0;
                                         <div class="branch lv5">
                                             @foreach($ggc->childs as $ggcc)
                                             <div class="entry {{ $ggccCount == 1 ? 'sole' : '' }}">
-                                                <span class="label">{{ link_to_route('users.tree', $ggcc->name, [$ggcc->id], ['title' => $ggcc->name.' ('.$ggcc->gender.')']) }}</span>
+                                                <span class="label">{{ link_to_route($ggcc->childs->count() > 0 ? 'users.tree':'users.show', $ggcc->name, [$ggcc->id], ['title' => $ggcc->name.' ('.$ggcc->gender.')']) }}</span>
                                             </div>
                                             @endforeach
                                         </div>
