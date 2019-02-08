@@ -48,5 +48,10 @@
 @endforeach
 
 {{ $users->appends(Request::except('page'))->render() }}
+@else
+<br/>
+<p>
+本站由李如琦维护。李氏宗亲可以自行录入，如果有其它问题或者建议，可以联系我本人。
+</p>
 @endif
 @endsection
