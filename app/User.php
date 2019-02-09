@@ -138,6 +138,11 @@ class User extends Authenticatable
         return link_to_route('users.'.$type, $this->name, [$this->id]);
     }
 
+    public function treeLink()
+    {
+        return link_to_route($this->childs->empty() ? 'users.show' : 'users.tree', $this->fullName(), [$this->id]);
+    }
+
     public function fatherLink()
     {
         return $this->father_id ? link_to_route('users.show', $this->father->name, [$this->father_id]) : null;
