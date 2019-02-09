@@ -37,7 +37,7 @@ $ggccTotal = 0;
                                 <div class="branch lv4">
                                     @foreach($gg->childs as $ggc)
                                     <div class="entry {{ $ggcCount == 1 ? 'sole' : '' }}">
-                                        <span class="label">{{ $ggc->treeLink(); }}</span>
+                                        <span class="label">{{ $ggc->treeLink() }}</span>
                                         @if ($ggccCount = $ggc->childs->count())
                                         <?php $ggccTotal += $ggccCount ?>
                                         <div class="branch lv5">
