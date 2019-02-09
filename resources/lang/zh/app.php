@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'family_name'       => '李',
     // Labels
     'my_profile'        => '个人信息',
     'search'            => '搜索',

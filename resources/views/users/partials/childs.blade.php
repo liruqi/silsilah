@@ -22,7 +22,7 @@
             {{ Form::open(['route' => ['family-actions.add-child', $user->id]]) }}
             <div class="row">
                 <div class="col-md-8">
-                    {!! FormField::text('add_child_name', ['label' => __('user.child_name')]) !!}
+                    {!! FormField::text('add_child_name', ['label' => __('user.child_name'), 'value' => $user->decentName()]) !!}
                 </div>
                 <div class="col-md-4">
                     {!! FormField::radios('add_child_gender_id', [1 => __('app.male'), 2 => __('app.female')], ['label' => __('user.child_gender')]) !!}
@@ -33,7 +33,7 @@
                     {!! FormField::select('add_child_parent_id', $usersMariageList, ['label' => __('user.add_child_from_existing_couples', ['name' => $user->name]), 'placeholder' => __('app.unknown')]) !!}
                 </div>
                 <div class="col-md-4">
-                    {!! FormField::text('add_child_birth_order', ['label' => __('user.birth_order'), 'type' => 'number', 'min' => 1]) !!}
+                    {!! FormField::text('add_child_birth_order', ['label' => __('user.birth_order'), 'type' => 'number', 'min' => 1, 'value' => 1 + $user->childs->count()]) !!}
                 </div>
             </div>
 

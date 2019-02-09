@@ -104,6 +104,15 @@ class User extends Authenticatable
         return $this->name . trans('user.nickname') . $this->nickname; 
     }
 
+    public function decentName()
+    {
+        foreach ($this->childs as $child) {
+            return mb_substr($child->name, 0, 2);
+        }
+
+        return trans('app.family_name'); 
+    }
+
     public function father()
     {
         return $this->belongsTo(User::class);
