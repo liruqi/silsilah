@@ -7,5 +7,7 @@
     @if ($user->childs->count() > 0)
     {{ link_to_route('users.tree', trans('app.show_family_tree'), [$user->id], ['class' => Request::segment(3) == 'tree' ? 'btn btn-default active' : 'btn btn-default']) }}
     @endif
+    @if ($user->wifes->isEmpty() == false)
     {{ link_to_route('users.marriages', trans('app.show_marriages'), [$user->id], ['class' => Request::segment(3) == 'marriages' ? 'btn btn-default active' : 'btn btn-default']) }}
+    @endif
 </div>
