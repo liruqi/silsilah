@@ -110,6 +110,12 @@ class User extends Authenticatable
             return mb_substr($child->name, 0, 2);
         }
 
+        foreach($this->siblings() as $sibling) {
+            if ($sibling->childs->count() > 0) {
+                return $sibling->decentName();
+            }
+        }
+
         return trans('app.family_name'); 
     }
 
