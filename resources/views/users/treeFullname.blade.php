@@ -37,7 +37,7 @@ $ggccTotal = 0;
                                 <div class="branch lv4">
                                     @foreach($gg->childs as $ggc)
                                     <div class="entry {{ $ggcCount == 1 ? 'sole' : '' }}">
-                                        <span class="label">{{ link_to_route('users.tree', $ggc->fullName(), [$ggc->id], ['title' => $ggc->name.' ('.$ggc->gender.')']) }}</span>
+                                        <span class="label">{{ $ggc->treeLink(); }}</span>
                                         @if ($ggccCount = $ggc->childs->count())
                                         <?php $ggccTotal += $ggccCount ?>
                                         <div class="branch lv5">
