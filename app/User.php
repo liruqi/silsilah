@@ -146,7 +146,7 @@ class User extends Authenticatable
 
     public function treeLink()
     {
-        return link_to_route($this->childs->isEmpty() ? 'users.show' : 'users.tree', $this->fullName(), [$this->id]);
+        return link_to_route($this->childs->isEmpty() ? 'users.show' : 'users.tree', $this->fullName(), [$this->id], ['title' => $this->name.' ('.$this->gender.')']);
     }
 
     public function fatherLink()

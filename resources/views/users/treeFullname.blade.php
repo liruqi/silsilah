@@ -19,19 +19,19 @@ $ggccTotal = 0;
         <div class="branch lv1">
             @foreach($user->childs as $child)
             <div class="entry {{ $childsCount == 1 ? 'sole' : '' }}">
-                <span class="label">{{ link_to_route('users.tree', $child->fullName(), [$child->id], ['title' => $child->name.' ('.$child->gender.')']) }}</span>
+                <span class="label">{{ $child->treeLink() }}</span>
                 @if ($grandsCount = $child->childs->count())
                 <?php $grandChildsTotal += $grandsCount ?>
                 <div class="branch lv2">
                     @foreach($child->childs as $grand)
                     <div class="entry {{ $grandsCount == 1 ? 'sole' : '' }}">
-                        <span class="label">{{ link_to_route('users.tree', $grand->fullName(), [$grand->id], ['title' => $grand->name.' ('.$grand->gender.')']) }}</span>
+                        <span class="label">{{ $grand->treeLink() }}</span>
                         @if ($ggCount = $grand->childs->count())
                         <?php $ggTotal += $ggCount ?>
                         <div class="branch lv3">
                             @foreach($grand->childs as $gg)
                             <div class="entry {{ $ggCount == 1 ? 'sole' : '' }}">
-                                <span class="label">{{ link_to_route('users.tree', $gg->fullName(), [$gg->id], ['title' => $gg->name.' ('.$gg->gender.')']) }}</span>
+                                <span class="label">{{ $gg->treeLink() }}</span>
                                 @if ($ggcCount = $gg->childs->count())
                                 <?php $ggcTotal += $ggcCount ?>
                                 <div class="branch lv4">

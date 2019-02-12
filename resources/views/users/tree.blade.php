@@ -79,15 +79,15 @@ $ggccTotal = 0;
     <div class="col-md-1 text-left"><strong style="font-size:30px">{{ $grandChildsTotal }}</strong></div>
     @endif
     @if ($ggTotal)
-    <div class="col-md-1 text-right">Jumlah Cicit</div>
+    <div class="col-md-1 text-right">曾孙</div>
     <div class="col-md-1 text-left"><strong style="font-size:30px">{{ $ggTotal }}</strong></div>
     @endif
     @if ($ggcTotal)
-    <div class="col-md-1 text-right">Jumlah Canggah</div>
+    <div class="col-md-1 text-right">玄孙</div>
     <div class="col-md-1 text-left"><strong style="font-size:30px">{{ $ggcTotal }}</strong></div>
     @endif
     @if ($ggccTotal)
-    <div class="col-md-1 text-right">Jumlah Wareng</div>
+    <div class="col-md-1 text-right">来孙</div>
     <div class="col-md-1 text-left"><strong style="font-size:30px">{{ $ggccTotal }}</strong></div>
     @endif
     <div class="col-md-1">&nbsp;</div>
