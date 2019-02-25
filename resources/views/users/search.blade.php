@@ -53,6 +53,8 @@
 <div>
 <p>本站为李氏宗谱提供查询、录入服务，由<a href="/users/49b20e78-70eb-4761-93b5-1e2a008129e3">如琦</a>维护。目前已记录的最早的人物为<a href="/users/b0abcb60-7c00-4b53-b104-e9fe00321b52">李恪</a>。</p>
 <p>李氏宗亲可以注册账号，自行录入，也欢迎为本站提供李氏宗谱的复印件或者电子扫描件。如果有合作意向，或有其它问题及建议，可以联系<a href="/users/49b20e78-70eb-4761-93b5-1e2a008129e3">如琦</a>本人。</a>
+<p>已经录制的宗谱电子档：</p>
+<ul><li><a href="https://1drv.ms/f/s!ArPR6_c0-GPAtKQcQk0e2J8sJBkG5A">唐</a></li></ul>
 </p>
 @endif
 @endsection
